@@ -34,47 +34,46 @@ public class Application {
         ArrayList<String> tesztEsetek = new ArrayList<String>();
 
         testNames.add("initAndStart");
-        tesztEsetek.add("Inicializálás, és játék indítás");
+        tesztEsetek.add("Inicializalas, es jatek inditas");
 
         testNames.add("stepTrain");
-        tesztEsetek.add("Vonat léptetése sínen");
+        tesztEsetek.add("Vonat leptetese sinen");
 
         testNames.add("stepTrainOnSwitch");
-        tesztEsetek.add("Vonat léptetése váltóra");
+        tesztEsetek.add("Vonat leptetese valtora");
 
         testNames.add("managePortal");
-        tesztEsetek.add("Alagút építése/rombolása");
+        tesztEsetek.add("Alagut epitese/rombolasa");
 
         testNames.add("goThroughTunnel");
-        tesztEsetek.add("Átjárás egy alagúton");
+        tesztEsetek.add("Atjaras egy alaguton");
 
         testNames.add("stepOnStationGetOff");
-        tesztEsetek.add("Állomásra lépés, utas leszáll");
+        tesztEsetek.add("Allomasra lepes, utas leszall");
 
         testNames.add("stepOnStationNoGetOff");
-        tesztEsetek.add("Állomásra lépés, utas nem tud leszállni");
+        tesztEsetek.add("Allomasra lepes, utas nem tud leszallni");
 
         testNames.add("stepOnStationFirstIsCoaly");
-        tesztEsetek.add("Állomásra lépés, első kocsi szeneskocsi, leszállás");
+        tesztEsetek.add("Allomasra lepes, elso kocsi szeneskocsi, leszallas");
 
         testNames.add("stepOnStationDisappear");
-        tesztEsetek.add("Állomásra lépés, leszállás, vonat eltűnik");
+        tesztEsetek.add("Allomasra lepes, leszallas, vonat eltunik");
 
         testNames.add("stepOnStationGetOn");
-        tesztEsetek.add("Állomásra lépés, felszállás");
+        tesztEsetek.add("Allomasra lepes, felszallas");
 
         testNames.add("collision");
-        tesztEsetek.add("Ütközés");
+        tesztEsetek.add("Utkozes");
 
         testNames.add("exit");
-        tesztEsetek.add("Kilépés");
+        tesztEsetek.add("Kilepes");
 
         Scanner scSystemIn = new Scanner(System.in);
         Scanner scFile = null;
 
         while(true){
             for (int i = 0; i < testNames.size(); ++i) {
-                //System.out.println(testNames.get(i) +  "\t\t\t" + tesztEsetek.get(i));
                 System.out.printf("%-30.30s -----> %-30.50s%n", testNames.get(i), tesztEsetek.get(i));
             }
             System.out.println("choose a test case from the list above with the right parameters and press enter:");
@@ -83,13 +82,14 @@ public class Application {
                System.exit(0);
             }
             else if (testNames.contains(testName)) {
-                String path = "src\\" + testName + ".txt";
+                //IntelliJ-bol futtatod, akkor String path = "src\\" + testName + ".txt";
+                String path = testName + ".txt";
                 File theFile = new File(path);
                 try {
                     scFile = new Scanner(theFile);
                 }
                 catch (Exception e){
-                    //TODO
+                    System.out.println("Hiba a tesztesethez tartozo fajl beolvasasakor!");
                 }
                 while(scFile.hasNext()) {
                     String[] inputCommand = scFile.nextLine().split(" ");
@@ -280,6 +280,7 @@ public class Application {
             else {
                 System.out.println("-Invalid syntax!");
             }
+            System.out.println("----------------------------------------------------------------------------------------");
         }
     }
 }
