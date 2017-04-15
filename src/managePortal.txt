@@ -1,0 +1,16 @@
+newGame
+createBoardItem SpecialPlace
+createBoardItem SpecialPlace
+createBoardItem Rail
+createBoardItem Rail
+listBoardItems
+connectBoardItems sp1 r1
+connectBoardItems r1 sp1
+connectBoardItems sp2 r2
+connectBoardItems r2 sp2
+start
+listSpecialPlaces
+managePortal sp1
+managePortal sp2
+managePortal sp1
+managePortal sp2

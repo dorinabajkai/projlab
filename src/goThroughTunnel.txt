@@ -1,0 +1,27 @@
+newGame
+createBoardItem Rail
+createBoardItem SpecialPlace
+createBoardItem SpecialPlace
+createBoardItem Rail
+createBoardItem Rail
+createBoardItem Rail
+listBoardItems
+connectBoardItems sp1 r2
+connectBoardItems r2 sp1
+connectBoardItems sp1 r1
+connectBoardItems r1 sp1
+connectBoardItems sp2 r3
+connectBoardItems r3 sp2
+connectBoardItems r3 r4
+connectBoardItems r4 r3
+start
+listSpecialPlaces
+createTrain r1 blue !empty
+managePortal sp1
+managePortal sp2
+listTrains
+stepTrain t1
+stepTrain t1
+stepTrain t1
+stepTrain t1
+stepTrain t1

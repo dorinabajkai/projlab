@@ -1,0 +1,17 @@
+newGame
+createBoardItem Rail
+createBoardItem Rail
+createBoardItem Switch
+createBoardItem Rail
+createBoardItem Rail
+listBoardItems
+connectBoardItems r1 r2
+connectBoardItems r2 r1
+connectBoardItems r2 sw1
+connectBoardItems sw1 r2
+connectBoardItems sw1 r3
+connectBoardItems r3 sw1
+connectBoardItems r4 sw1
+connectBoardItems sw1 r4
+createTrain r1 blue !empty
+start
