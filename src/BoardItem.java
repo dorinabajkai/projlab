@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * absztrakt osztály a pályán lévő elemekhez
  */
-public abstract class BoardItem {
+public abstract class BoardItem implements IClickEvent{
 
     /**
      * pályaelem azonosítója
@@ -33,10 +33,14 @@ public abstract class BoardItem {
      */
     protected TrainItem content;
 
+
+    protected Position position;
+
     /**
      * a pályaelem konstruktora, paraméterként megkapja, hogy virtuális-e.
      * @param virtual a virtuálisságot jelző attribútum
      */
+
     public BoardItem(boolean virtual) {
         neighbours = new ArrayList<BoardItem>();
         this.isVirtual = virtual;
@@ -97,4 +101,23 @@ public abstract class BoardItem {
     public String getID(){
         return id;
     }
+
+
+    public void draw(){
+
+    }
+
+    public Position getPosition(){
+        return position;
+    }
+
+    public void setPosition(Position p){
+        position = p;
+    }
+
+    @Override
+    public void action(){
+
+    }
+
 }

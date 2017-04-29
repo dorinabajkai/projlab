@@ -22,6 +22,10 @@ public class Board {
      */
     private Tunnel tunnel;
 
+
+
+
+
     /**
      * a konstruktor
      * indítványozza a pályán levő pályaelemek inicializálását
@@ -139,12 +143,12 @@ public class Board {
      * @param id a visszaadandó pályaelem azonosítója
      * @return az adott azonosítójú pályaelem
      */
+    //TODO
     public BoardItem getBoardItem(String id) {
-        for (BoardItem bi: boardItems) {
-            if (bi.getID().equals(id)) {
-                return bi;
-            }
-        }
+
+
+
+
         return null;
     }
 

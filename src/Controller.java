@@ -1,7 +1,10 @@
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
 /**
  * a vezérlés megvalósítása
  */
-public class Controller implements Runnable{
+public class Controller implements Runnable, MouseListener{
     /**
      * a következő vonat létrehozásáig hátralévő idő
      */
@@ -76,4 +79,24 @@ public class Controller implements Runnable{
      * a játék végét menedzseli
      */
     private void gameOver() {}
+
+    public void mouseEntered(MouseEvent e){
+
+    }
+
+    public void mouseExited(MouseEvent e){
+
+    }
+
+    public void mouseClicked(MouseEvent e){
+
+    }
+
+    public void mouseReleased(MouseEvent e){
+
+    }
+
+    public void mousePressed(MouseEvent e){
+
+    }
 }

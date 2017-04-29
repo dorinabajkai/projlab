@@ -4,7 +4,7 @@ import java.util.*;
 /**
  * a különleges helyeket megvalósító osztály
  */
-public class SpecialPlace extends BoardItem implements IRemoveNeighbour {
+public class SpecialPlace extends BoardItem implements IRemoveNeighbour, IClickEvent {
 
     /**
      * különleges helyek azonosítójának generálását segíti elő
@@ -120,5 +120,11 @@ public class SpecialPlace extends BoardItem implements IRemoveNeighbour {
      */
     public static void resetIDCounter() {
         idCounter = 0;
+    }
+
+    @Override
+    //TODO
+    public void action(){
+
     }
 }

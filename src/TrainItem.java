@@ -1,4 +1,6 @@
 
+import javafx.geometry.Pos;
+
 import java.util.*;
 
 /**
@@ -45,6 +47,9 @@ public class TrainItem extends Empty {
      * false -  a vonatelem nem látható
      */
     private boolean visibility;
+
+    private Position position;
+
 
     /**
      * vonatelem konstruktora, létrehozza a vonatelemet a paraméterként kapott színnel
@@ -186,4 +191,13 @@ public class TrainItem extends Empty {
     public String getColor() {
         return this.color;
     }
+
+    public Position getPosition(){
+        return position;
+    }
+
+    public void setPosition(Position p){
+        position = p;
+    }
+
 }

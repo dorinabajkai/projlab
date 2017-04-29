@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * a váltó
  */
-public class Switch extends BoardItem {
+public class Switch extends BoardItem implements IClickEvent{
 
     /**
      * a váltük azonosítójának generálást segíti elő
@@ -90,4 +90,11 @@ public class Switch extends BoardItem {
     public static void resetIDCounter() {
         idCounter = 0;
     }
+
+    //TODO
+    @Override
+    public void action(){
+
+    }
+
 }
