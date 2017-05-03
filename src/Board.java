@@ -1,5 +1,6 @@
 
 import javax.naming.ldap.Control;
+import javax.swing.*;
 import java.util.*;
 
 /**
@@ -38,13 +39,19 @@ public class Board {
         tunnel = new Tunnel();
 
         initBoardItems();
+
+        JFrame frame = new Window("Szoftver projekt laboratórium 2017, Hard_Llamas");
+        frame.setVisible(true);
     }
 
     /**
      * A pályát inicializáló függvény. Létrehozza a síneket, különleges helyeket, váltókat,
      *  állomásokat, beállítja a szomszédságokat.
      */
-    private void initBoardItems() {}
+    private void initBoardItems() {
+
+
+    }
 
     /**
      *Feltölti a pályát a paraméterként átadott BoardItem lista elemeivel, és létrehozza a szomszédságokat

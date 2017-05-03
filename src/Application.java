@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.io.File;
 import java.util.*;
 
@@ -20,7 +21,15 @@ public class Application {
      * @param args a parancssoron keresztül kapott argumentumok tömbje
      */
     public static void main(String[] args) {
-        init();
+
+
+        Board board = new Board();
+        Player player = new Player("be kell kérni");
+        Controller controller = new Controller(board, player);
+        controller.start();
+
+    }
+        /*init();
 
         Scanner scSystemIn = new Scanner(System.in);
         Scanner scFile = null;
@@ -306,5 +315,5 @@ public class Application {
 
         testNames.add("exit");
         tesztEsetek.add("Kilepes");
-    }
+    }*/
 }
