@@ -25,8 +25,8 @@ public class Application {
 
         Board board = new Board();
         Player player = new Player("be kell kérni");
-        Controller controller = new Controller(board, player);
-        controller.start();
+        JFrame frame = new Window("Szoftver projekt laboratórium 2017, Hard_Llamas", board);
+        frame.setVisible(true);
 
     }
         /*init();

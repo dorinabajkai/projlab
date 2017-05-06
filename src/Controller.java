@@ -4,7 +4,7 @@ import java.awt.event.MouseListener;
 /**
  * a vezérlés megvalósítása
  */
-public class Controller implements Runnable, MouseListener{
+public class Controller implements Runnable{
     /**
      * a következő vonat létrehozásáig hátralévő idő
      */
@@ -14,11 +14,6 @@ public class Controller implements Runnable, MouseListener{
      * a pályán még létrejövendő vonatok száma
      */
     private int trainCounter;
-
-    /**
-     * a játékos referenciája
-     */
-    private Player player;
 
     /**
      * a pálya referenciája
@@ -37,11 +32,9 @@ public class Controller implements Runnable, MouseListener{
 
     /**
      * @param b a board tagváltozó értéke
-     * @param p a player tagváltozó értéke
      */
-    public Controller(Board b, Player p) {
+    public Controller(Board b) {
         this.board = b;
-        this.player = p;
         this.createTrainFrequency = 30;
         this.maxTrains = 5;
         this.trainCounter = this.maxTrains;
@@ -79,24 +72,4 @@ public class Controller implements Runnable, MouseListener{
      * a játék végét menedzseli
      */
     private void gameOver() {}
-
-    public void mouseEntered(MouseEvent e){
-
-    }
-
-    public void mouseExited(MouseEvent e){
-
-    }
-
-    public void mouseClicked(MouseEvent e){
-
-    }
-
-    public void mouseReleased(MouseEvent e){
-
-    }
-
-    public void mousePressed(MouseEvent e){
-
-    }
 }

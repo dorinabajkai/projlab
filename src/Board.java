@@ -40,8 +40,7 @@ public class Board {
 
         initBoardItems();
 
-        JFrame frame = new Window("Szoftver projekt laboratórium 2017, Hard_Llamas");
-        frame.setVisible(true);
+
     }
 
     /**
